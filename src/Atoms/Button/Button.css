@@ -49,6 +49,19 @@
   border-color: #FEE4E4;
 }
 
+.tertiary {
+  color: #f45a5a;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.tertiary:disabled {
+  cursor: not-allowed;
+  color: #F49999;
+  background-color: transparent;
+  border-color: transparent;
+}
+
 .neutral {
   background-color: #d6d6df;
   border-color: #d6d6df;
@@ -64,4 +77,8 @@
   color: #C6C5C5;
   border-color: #EFEFF2;
   background-color: #EFEFF2;
+}
+
+.Icon {
+  width: 15px;
 }

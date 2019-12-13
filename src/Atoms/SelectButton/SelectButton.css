@@ -1,0 +1,43 @@
+.SelectButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  box-shadow: none;
+  position: relative;
+  padding: 8px 25px;
+  border-radius: 6px;
+  border: none;
+  background-color: #f0f0f4;
+  color: #8c8b8b;
+  line-height: 1.33;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.ButtonText {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 25px;
+}
+
+.Tick {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+}
+
+.SelectButton--Selected {
+  background-color: #2b2c4e;
+  color: white;
+}
+
+.Disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}

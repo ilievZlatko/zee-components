@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { TProps } from './btnTypes'
+import { TProps } from './Types'
 
 import styles from './Button.css'
 
@@ -10,12 +10,13 @@ class Button extends React.Component<TProps, {}> {
     primary: true,
     secondary: false,
     neutral: false,
+    tertiary: false,
     disabled: false,
-    iconName: ''
+    icon: null
   }
 
   public render(): JSX.Element {
-    const { children, type, secondary, neutral, onClick, disabled, iconName } = this.props
+    const { children, type, secondary, tertiary, neutral, onClick, disabled, icon } = this.props
 
     let styleType
 
@@ -23,6 +24,8 @@ class Button extends React.Component<TProps, {}> {
       styleType = 'neutral'
     } else if (secondary) {
       styleType = 'secondary'
+    } else if (tertiary) {
+      styleType = 'tertiary'
     } else {
       styleType = 'primary'
     }
@@ -34,7 +37,7 @@ class Button extends React.Component<TProps, {}> {
         type={type}
         onClick={e => onClick(e)}
       >
-        {iconName && 'icon'}
+        {icon && <img src={icon} alt="icon" className={styles.Icon} />}
         {children}
       </button>
     )

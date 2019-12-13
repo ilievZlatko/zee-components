@@ -7,6 +7,7 @@ export interface TProps {
   secondary?: boolean;
   neutral?: boolean;
   disabled?: boolean;
+  tertiary?: boolean;
   onClick: (event: React.MouseEvent) => void;
-  iconName?: string;
+  icon?: string|null;
 }
