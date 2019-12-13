@@ -1,5 +1,5 @@
 # React and TypeScript Component Library with Storybook
-![alt text](https://raw.githubusercontent.com/ilievZlatko/zee-lib/master/src/assets/images/lib-screenshot.png)
+![alt text](https://github.com/ilievZlatko/zee-components/blob/master/src/assets/images/lib-screenshot.png)
 
 ## Available Scripts
 
