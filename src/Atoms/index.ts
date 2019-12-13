@@ -4,6 +4,8 @@ import SelectButton from './SelectButton'
 import RoundButton from './RoundButton'
 import Radio from './Radio'
 import Checkbox from './Checkbox'
+import Text from './Text'
+import Switch from './Switch'
 
 // export Atoms
 export {
@@ -11,5 +13,7 @@ export {
   SelectButton,
   RoundButton,
   Radio,
-  Checkbox
+  Checkbox,
+  Text,
+  Switch
 }

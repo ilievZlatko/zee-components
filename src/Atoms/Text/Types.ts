@@ -1,13 +1,14 @@
 import * as React from 'react'
 
-export type Props = {
+export interface Props {
+  label: string;
   id: string;
-  name: string;
-  checked?: boolean;
+  name?: string;
   required?: boolean;
+  size?: number;
+  placeholder?: string;
+  maxLength?: number;
+  minLength?: number;
   value: string;
-  readonly?: boolean;
-  disabled?: boolean;
-  label?: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }

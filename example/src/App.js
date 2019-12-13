@@ -1,12 +1,22 @@
 import React, { Component } from 'react'
 
-import { Button, SelectButton, RoundButton, Radio, Checkbox } from 'zee-components'
+import {
+  Button,
+  SelectButton,
+  RoundButton,
+  Radio,
+  Checkbox,
+  Text,
+  Switch
+ } from 'zee-components'
 
 class App extends Component {
   state = {
     selectBtnVal: 'one',
     radioSelected: 'radio 1',
     optionOneSelected: true,
+    text: '',
+    switchChecked: false
   }
 
   onSelectChange = val => {
@@ -23,8 +33,17 @@ class App extends Component {
     this.setState({ optionOneSelected: event.currentTarget.checked })
   }
 
+  onTextChange = event => {
+    this.setState({ text: event.currentTarget.value })
+  }
+
+  onSwitchChange = event => {
+    console.log(event.currentTarget.checked)
+    this.setState({ switchChecked: event.currentTarget.checked })
+  }
+
   render () {
-    const { selectBtnVal, radioSelected, optionOneSelected } = this.state
+    const { selectBtnVal, radioSelected, optionOneSelected, text, switchChecked} = this.state
 
     return (
       <div style={{ width: '960px', margin: '20px auto' }}>
@@ -50,12 +69,12 @@ class App extends Component {
           value='one'
           checked={selectBtnVal === 'one'}
           onClick={this.onSelectChange}
-        >Toggle Selection</SelectButton>
+        >Option One</SelectButton>
         <SelectButton
           value='two'
           checked={selectBtnVal === 'two'}
           onClick={this.onSelectChange}
-        >Toggle Selection</SelectButton>
+        >Option Two</SelectButton><br/><br/>
 
         <RoundButton onClick={e => console.log(e)} /><br/><br/>
 
@@ -65,6 +84,10 @@ class App extends Component {
         <br />
         <br />
         <Checkbox id='checkbox-1' name='checkbox-1' value='option-1' checked={optionOneSelected} onChange={(e) => this.onCheckboxChange(e)} label='Option 1' />
+        <br />
+        <Text id='text' size='30' label='Label' placeholder='Type text here...' value={text} onChange={(e) => this.onTextChange(e)} />
+        <br />
+        <Switch name='checkbox-1' value='switch' checked={switchChecked} onChange={(e) => this.onSwitchChange(e)} />
       </div>
     )
   }
