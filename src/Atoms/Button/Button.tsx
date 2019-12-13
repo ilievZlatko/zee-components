@@ -10,7 +10,7 @@ class Button extends React.Component<TProps, {}> {
     primary: true,
     secondary: false,
     neutral: false,
-    disaled: false,
+    disabled: false,
     iconName: ''
   }
 

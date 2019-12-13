@@ -26,6 +26,12 @@
   border-bottom-color: #C27979;
 }
 
+.primary:disabled {
+  cursor: not-allowed;
+  background-color: #FAADAD;
+  border-color: #FAADAD;
+}
+
 .secondary {
   border-color: #f45a5a;
   background-color: transparent;
@@ -37,6 +43,12 @@
   border-color: #F49999;
 }
 
+.secondary:disabled {
+  cursor: not-allowed;
+  color: #FEE4E4;
+  border-color: #FEE4E4;
+}
+
 .neutral {
   background-color: #d6d6df;
   border-color: #d6d6df;
@@ -45,4 +57,11 @@
 
 .neutral:hover {
   border-bottom-color: #B0B0B5;
+}
+
+.neutral:disabled {
+  cursor: not-allowed;
+  color: #C6C5C5;
+  border-color: #EFEFF2;
+  background-color: #EFEFF2;
 }
