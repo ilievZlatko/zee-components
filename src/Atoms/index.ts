@@ -6,6 +6,7 @@ import Radio from './Radio'
 import Checkbox from './Checkbox'
 import Text from './Text'
 import Switch from './Switch'
+import Tag from './Tag'
 
 // export Atoms
 export {
@@ -15,5 +16,6 @@ export {
   Radio,
   Checkbox,
   Text,
-  Switch
+  Switch,
+  Tag
 }

@@ -1,0 +1,46 @@
+.Tag {
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: .1px;
+  padding: 0 15px;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 25px;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.Success {
+  background-color: #20cb81;
+  color: #fff;
+}
+
+.Danger {
+  background-color: #f54040;
+  color: #fff;
+}
+
+.Info {
+  background-color: #fcca1b;
+  color: #2c3e48;
+}
+
+.Void {
+  background-color: #f0f0f4;
+  color: #2c3e48;
+}
+
+.Accepted {
+  background-color: #4e8af1;
+  color: #fff;
+}
+
+.Cancelled {
+  background-color: #000;
+  color: #fff;
+}
+
+.Rounded {
+  border-radius: 15px;
+}

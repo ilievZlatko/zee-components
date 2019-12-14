@@ -5,10 +5,10 @@ export interface Props {
   id: string;
   name?: string;
   required?: boolean;
-  size?: number;
+  size?: number|undefined;
   placeholder?: string;
-  maxLength?: number;
-  minLength?: number;
+  maxLength?: number|undefined;
+  minLength?: number|undefined;
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }

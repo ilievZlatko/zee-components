@@ -7,6 +7,7 @@ import {
   Radio,
   Checkbox,
   Text,
+  Tag,
   Switch
  } from 'zee-components'
 
@@ -85,11 +86,18 @@ class App extends Component {
         <br />
         <Checkbox id='checkbox-1' name='checkbox-1' value='option-1' checked={optionOneSelected} onChange={(e) => this.onCheckboxChange(e)} label='Option 1' />
         <br />
-        <Text id='text' size='30' label='Label' placeholder='Type text here...' value={text} onChange={(e) => this.onTextChange(e)} />
+        <Text id='text' size={30} label='Label' placeholder='Type text here...' value={text} onChange={(e) => this.onTextChange(e)} />
         <br />
         <Switch name='checkbox-1' value='switch' checked={switchChecked} onChange={(e) => this.onSwitchChange(e)} />
         <br />
         <Switch name='checkbox-2' disabled value='switch2' checked={true} onChange={(e) => this.onSwitchChange(e)} />
+        <br />
+        <Tag>Void</Tag>
+        <Tag accepted>Accepted</Tag>
+        <Tag info>Info</Tag>
+        <Tag cancelled>Cancelled</Tag>
+        <Tag success>Success</Tag>
+        <Tag danger rounded>Danger</Tag>
       </div>
     )
   }
