@@ -88,6 +88,8 @@ class App extends Component {
         <Text id='text' size='30' label='Label' placeholder='Type text here...' value={text} onChange={(e) => this.onTextChange(e)} />
         <br />
         <Switch name='checkbox-1' value='switch' checked={switchChecked} onChange={(e) => this.onSwitchChange(e)} />
+        <br />
+        <Switch name='checkbox-2' disabled value='switch2' checked={true} onChange={(e) => this.onSwitchChange(e)} />
       </div>
     )
   }
