@@ -8,6 +8,8 @@ import Text from './Text'
 import Switch from './Switch'
 import Tag from './Tag'
 import Number from './Number'
+import Select from './Select'
+import Option from './Option'
 
 // export Atoms
 export {
@@ -19,5 +21,7 @@ export {
   Text,
   Switch,
   Tag,
-  Number
+  Number,
+  Option,
+  Select
 }

@@ -9,7 +9,8 @@ import {
   Text,
   Tag,
   Switch,
-  Number
+  Number,
+  Select
  } from 'zee-components'
 
 class App extends Component {
@@ -19,7 +20,14 @@ class App extends Component {
     optionOneSelected: true,
     text: '',
     switchChecked: false,
-    numberVal: 0
+    numberVal: 0,
+    options: [
+      { value: null, label: 'Select option', selected: true },
+      { value: 'option-1', label: 'Option 1', selected: false },
+      { value: 'option-2', label: 'Option 2', selected: false },
+      { value: 'option-3', label: 'Option 3', selected: false },
+      { value: 'option-4', label: 'Option 4', selected: false }
+    ]
   }
 
   onSelectChange = val => {
@@ -49,8 +57,12 @@ class App extends Component {
     this.setState({ numberVal: event.currentTarget.value })
   }
 
+  selectOption = option => {
+    console.log(option)
+  }
+
   render () {
-    const { selectBtnVal, radioSelected, optionOneSelected, text, switchChecked, numberVal} = this.state
+    const { selectBtnVal, radioSelected, optionOneSelected, text, switchChecked, numberVal, options} = this.state
 
     return (
       <div style={{ width: '960px', margin: '20px auto' }}>
@@ -109,6 +121,9 @@ class App extends Component {
         <br />
         <br />
         <Number id='number' value={numberVal} onChange={(e) => this.onNumberChange(e)} label='Number label' />
+        <br />
+        <br />
+        <Select label='Select' options={options} onChange={option => this.selectOption(option)} />
       </div>
     )
   }
