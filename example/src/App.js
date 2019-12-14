@@ -8,7 +8,8 @@ import {
   Checkbox,
   Text,
   Tag,
-  Switch
+  Switch,
+  Number
  } from 'zee-components'
 
 class App extends Component {
@@ -17,7 +18,8 @@ class App extends Component {
     radioSelected: 'radio 1',
     optionOneSelected: true,
     text: '',
-    switchChecked: false
+    switchChecked: false,
+    numberVal: 0
   }
 
   onSelectChange = val => {
@@ -43,8 +45,12 @@ class App extends Component {
     this.setState({ switchChecked: event.currentTarget.checked })
   }
 
+  onNumberChange = event => {
+    this.setState({ numberVal: event.currentTarget.value })
+  }
+
   render () {
-    const { selectBtnVal, radioSelected, optionOneSelected, text, switchChecked} = this.state
+    const { selectBtnVal, radioSelected, optionOneSelected, text, switchChecked, numberVal} = this.state
 
     return (
       <div style={{ width: '960px', margin: '20px auto' }}>
@@ -86,11 +92,10 @@ class App extends Component {
         <br />
         <Checkbox id='checkbox-1' name='checkbox-1' value='option-1' checked={optionOneSelected} onChange={(e) => this.onCheckboxChange(e)} label='Option 1' />
         <br />
-        <Text id='text' size={30} label='Label' placeholder='Type text here...' value={text} onChange={(e) => this.onTextChange(e)} />
-        <br />
         <Switch name='checkbox-1' value='switch' checked={switchChecked} onChange={(e) => this.onSwitchChange(e)} />
         <br />
         <Switch name='checkbox-2' disabled value='switch2' checked={true} onChange={(e) => this.onSwitchChange(e)} />
+        <br />
         <br />
         <Tag>Void</Tag>
         <Tag accepted>Accepted</Tag>
@@ -98,6 +103,12 @@ class App extends Component {
         <Tag cancelled>Cancelled</Tag>
         <Tag success>Success</Tag>
         <Tag danger rounded>Danger</Tag>
+        <br/>
+        <br/>
+        <Text id='text' size={30} label='Label' placeholder='Type text here...' value={text} onChange={(e) => this.onTextChange(e)} />
+        <br />
+        <br />
+        <Number id='number' value={numberVal} onChange={(e) => this.onNumberChange(e)} label='Number label' />
       </div>
     )
   }

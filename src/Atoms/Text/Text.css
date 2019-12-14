@@ -3,27 +3,3 @@
   flex-flow: column;
   box-sizing: border-box;
 }
-
-.Label {
-  margin-bottom: 8px;
-  color: #2c3e48;
-}
-
-.Text {
-  border: 1px solid #e0e2e3;
-  border-radius: 6px;
-  padding: 10px 15px;
-  font-size: 14px;
-  font-family: sans-serif;
-  color: #2c3e48;
-  outline: none;
-  box-sizing: border-box;
-}
-
-.Text:focus {
-  border: 2px solid #2c3e48;
-}
-
-.Text::placeholder {
-  color: #c1c7cb;
-}

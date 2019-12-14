@@ -41,12 +41,12 @@
   transform: rotate(-45deg);
   border-bottom: 3px solid;
   border-left: 3px solid;
-  border-color: #f45a5a;
+  border-color: var(--coral);
 }
 
 .Label {
   padding-left: 27px;
   cursor: pointer;
   user-select: none;
-  color: #2c3e48;
+  color: var(--main-color);
 }

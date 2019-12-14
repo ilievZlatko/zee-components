@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import styles from './Text.css'
+import globals from '../../global.css'
 import { Props } from './Types'
 
 class Text extends React.Component<Props, {}> {
@@ -20,9 +21,9 @@ class Text extends React.Component<Props, {}> {
 
     return (
       <div className={styles.TextWrapper}>
-        <label className={styles.Label} htmlFor={id}>{label}</label>
+        <label className={globals.Label} htmlFor={id}>{label}</label>
         <input
-          className={styles.Text}
+          className={globals.Input}
           type="text"
           id={id}
           name={name}

@@ -1,0 +1,33 @@
+.NumbertWrapper {
+  display: inline-flex;
+  flex-flow: column;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.Up, .Down {
+  display: block;
+  position: absolute;
+  width: 10px;
+  background-color: white;
+  right: 14px;
+  padding: 1px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.Up {
+  bottom: 19px;
+}
+
+.Down {
+  bottom: 5px;
+  transform: rotate(180deg);
+}
+
+.Up:hover,
+.Down:hover {
+  border: 1px solid var(--silver);
+}

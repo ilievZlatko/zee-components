@@ -12,27 +12,27 @@
 }
 
 .Success {
-  background-color: #20cb81;
+  background-color: var(--green);
   color: #fff;
 }
 
 .Danger {
-  background-color: #f54040;
+  background-color: var(--red);
   color: #fff;
 }
 
 .Info {
-  background-color: #fcca1b;
-  color: #2c3e48;
+  background-color: var(--yellow);
+  color: var(--main-color);
 }
 
 .Void {
-  background-color: #f0f0f4;
-  color: #2c3e48;
+  background-color: var(--silver);
+  color: var(--main-color);
 }
 
 .Accepted {
-  background-color: #4e8af1;
+  background-color: var(--blue);
   color: #fff;
 }
 

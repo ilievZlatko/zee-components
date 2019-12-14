@@ -16,8 +16,8 @@
 }
 
 .primary {
-  background-color: #f45a5a;
-  border-color: #f45a5a;
+  background-color: var(--coral);
+  border-color: var(--coral);
 }
 
 .primary:hover {
@@ -38,9 +38,9 @@
 }
 
 .secondary {
-  border-color: #f45a5a;
+  border-color: var(--coral);
   background-color: transparent;
-  color: #f45a5a;
+  color: var(--coral);
 }
 
 .secondary:hover {
@@ -55,7 +55,7 @@
 }
 
 .tertiary {
-  color: #f45a5a;
+  color: var(--coral);
   background-color: transparent;
   border-color: transparent;
 }
@@ -68,9 +68,9 @@
 }
 
 .neutral {
-  border-color: #f0f0f4;
-  background-color: #f0f0f4;
-  color: #8c8b8b;
+  border-color: var(--silver);
+  background-color: var(--silver);
+  color: var(--grey);
 }
 
 .neutral:hover {

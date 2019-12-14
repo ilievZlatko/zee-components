@@ -41,12 +41,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #f45a5a;
+  background-color: var(--coral);
 }
 
 .Label {
   padding-left: 27px;
   cursor: pointer;
   user-select: none;
-  color: #2c3e48;
+  color: var(--main-color);
 }
