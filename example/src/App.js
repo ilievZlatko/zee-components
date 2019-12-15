@@ -19,6 +19,7 @@ class App extends Component {
     radioSelected: 'radio 1',
     optionOneSelected: true,
     text: '',
+    password: '',
     switchChecked: false,
     numberVal: 0,
     options: [
@@ -61,8 +62,12 @@ class App extends Component {
     console.log(option)
   }
 
+  changePass = event => {
+    this.setState({ password: event.currentTarget.value })
+  }
+
   render () {
-    const { selectBtnVal, radioSelected, optionOneSelected, text, switchChecked, numberVal, options} = this.state
+    const { selectBtnVal, radioSelected, optionOneSelected, text, switchChecked, numberVal, options, password} = this.state
 
     return (
       <div style={{ width: '960px', margin: '20px auto' }}>
@@ -117,7 +122,8 @@ class App extends Component {
         <Tag danger rounded>Danger</Tag>
         <br/>
         <br/>
-        <Text id='text' size={30} label='Label' placeholder='Type text here...' value={text} onChange={(e) => this.onTextChange(e)} />
+        <Text id='text' label='Label' placeholder='Your name' value={text} onChange={(e) => this.onTextChange(e)} /><br />
+        <Text id='passsword' type='password' label='Password' placeholder='Your password' value={password} onChange={(e) => this.changePass(e)} />
         <br />
         <br />
         <Number id='number' value={numberVal} onChange={(e) => this.onNumberChange(e)} label='Number label' />

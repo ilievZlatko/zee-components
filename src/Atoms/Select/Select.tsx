@@ -6,7 +6,7 @@ import globals from '../../global.css'
 
 import chevron from '../../assets/images/chevron-up.svg'
 
-import Option from '../Option'
+import Option from './Option'
 
 class Select extends React.Component<Props, State> {
   public state = {

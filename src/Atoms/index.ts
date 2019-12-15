@@ -9,7 +9,6 @@ import Switch from './Switch'
 import Tag from './Tag'
 import Number from './Number'
 import Select from './Select'
-import Option from './Option'
 
 // export Atoms
 export {
@@ -22,6 +21,5 @@ export {
   Switch,
   Tag,
   Number,
-  Option,
   Select
 }

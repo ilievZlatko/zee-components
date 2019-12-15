@@ -8,6 +8,7 @@ class Text extends React.Component<Props, {}> {
   render(): JSX.Element {
     const {
       id,
+      type = 'text',
       label,
       value,
       name,
@@ -24,7 +25,7 @@ class Text extends React.Component<Props, {}> {
         <label className={globals.Label} htmlFor={id}>{label}</label>
         <input
           className={globals.Input}
-          type="text"
+          type={type}
           id={id}
           name={name}
           required={required}

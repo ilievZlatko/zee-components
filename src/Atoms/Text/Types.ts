@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 export interface Props {
+  type?: 'text'|'password'|'email'|'tel';
   label: string;
   id: string;
   name?: string;
