@@ -1,7 +1,11 @@
-# React and TypeScript Component Library with Storybook
+# React and TypeScript Component Library
 ![alt text](https://github.com/ilievZlatko/zee-components/blob/master/src/assets/images/lib-screenshot.png)
 
-## Available Scripts
+## Live Preview here:
+
+[https://ilievzlatko.github.io/zee-components/](https://ilievzlatko.github.io/zee-components/)
+
+## Available Scripts:
 
 In the project directory, you can run:
 
@@ -14,9 +18,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
-
-#### Live Preview here:
-[https://ilievzlatko.github.io/zee-components/](https://ilievzlatko.github.io/zee-components/)
 
 ```console
 $ yarn test
