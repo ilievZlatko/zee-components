@@ -43,30 +43,29 @@ class Select extends React.Component<Props, State> {
     return (
       <div className={styles.Select}>
         <span className={globals.Label} onClick={this.toggleOpen}>{label}</span>
-        <div className={`${globals.Input} ${styles.Placeholder}`} onClick={this.toggleOpen}>{
-          selectedOption.label}
+        <div className={`${globals.Input} ${styles.Placeholder}`} onClick={this.toggleOpen}>
+          {selectedOption.label}
           <img
             className={[styles.Chevron, isOpen ? styles.ChevronOpen : ''].join(' ')}
             src={chevron}
             alt="chevron"
           />
         </div>
-        { isOpen &&
-          <div className={styles.OptionsContainer}>
-            {
-              options && options.length > 0 &&
-              options.map((option, index) => (
-                <Option
-                  key={`option-${option.value}-${index}`}
-                  label={option.label}
-                  value={option.value}
-                  selected={option.selected}
-                  onSelect={this.onSelect}
-                />
-              ))
-            }
-          </div>
-        }
+
+        <div className={[styles.OptionsContainer, isOpen ? styles.OptionsContainerOpen : ''].join(' ')}>
+          {
+            options && options.length > 0 &&
+            options.map((option, index) => (
+              <Option
+                key={`option-${option.value}-${index}`}
+                label={option.label}
+                value={option.value}
+                selected={option.selected}
+                onSelect={this.onSelect}
+              />
+            ))
+          }
+        </div>
       </div>
     )
   }

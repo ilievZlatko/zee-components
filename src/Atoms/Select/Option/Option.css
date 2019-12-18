@@ -1,26 +1,28 @@
 .Option {
   display: flex;
-  padding: 8px 15px;
+  padding: 5px 25px;
   box-sizing: border-box;
   font-size: 14px;
-  color: var(--main-color);
+  color: white;
   cursor: pointer;
   user-select: none;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.Option:hover {
-  background-color: var(--coral);
-  color: white;
-}
-
-.OptionSelected,
+.Option:hover,
 .OptionSelected:hover {
-  background-color: var(--silver);
-  color: var(--main-color);
+  background-color: var(--blue);
   cursor: auto;
+  cursor: pointer;
 }
 
 .OptionLabel {
-  margin-right: 20px;
+  position: relative;
+  padding: 0 25px;
+  box-sizing: border-box;
+}
+
+.Tick {
+  position: absolute;
+  left: 0;
 }

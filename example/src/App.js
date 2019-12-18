@@ -30,7 +30,8 @@ class App extends Component {
       { value: 'option-1', label: 'Option 1', selected: false },
       { value: 'option-2', label: 'Option 2', selected: false },
       { value: 'option-3', label: 'Option 3', selected: false },
-      { value: 'option-4', label: 'Option 4', selected: false }
+      { value: 'option-4', label: 'Option 4', selected: false },
+      { value: 'really-long', label: 'This is the longest ever option here...', selected: false }
     ]
   }
 

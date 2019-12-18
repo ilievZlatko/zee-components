@@ -1,4 +1,5 @@
 .Select {
+  position: relative;
   display: inline-flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -28,9 +29,20 @@
 }
 
 .OptionsContainer {
+  position: relative;
+  background: #31434c;
+  height: 0;
+  z-index: -1;
+  opacity: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+.OptionsContainerOpen {
+  position: fixed;
+  border-radius: 8px;
   padding: 10px 0;
-  border-radius: 6px;
-  border: 1px solid var(--silver);
-  max-height: 120px;
+  height: 120px;
   overflow-y: scroll;
+  opacity: 1;
+  z-index: 2;
 }
