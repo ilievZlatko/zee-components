@@ -10,8 +10,11 @@ import {
   Tag,
   Switch,
   Number,
-  Select
+  Select,
+  Link
  } from 'zee-components'
+
+ import edit from './assets/images/edit-silh.svg'
 
 class App extends Component {
   state = {
@@ -130,6 +133,10 @@ class App extends Component {
         <br />
         <br />
         <Select label='Select' options={options} onChange={option => this.selectOption(option)} />
+        <br />
+        <br />
+        <Link to='https://www.google.com/' target='_blank'>Visit Google</Link><br />
+        <Link onClick={() => console.log('Execute some code here!')} icon={edit}>Edit</Link>
       </div>
     )
   }
