@@ -15,12 +15,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-```console
-$ yarn storybook
-```
-
-Runs the interactive storybook where you can see and test the components.<br />
-Open [http://localhost:6006](http://localhost:6006) to view the Storybook in the browser.
+#### Live Preview here:
+```https://ilievzlatko.github.io/zee-components/```
 
 ```console
 $ yarn test
