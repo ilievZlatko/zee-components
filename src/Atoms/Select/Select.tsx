@@ -15,7 +15,7 @@ class Select extends React.Component<Props, State> {
   }
 
   componentDidMount() {
-    const selectedOptionFound = this.props.options.find(option => option.selected === true)
+    const selectedOptionFound = this.props.options.find(option => option.value === this.props.value)
     if (selectedOptionFound) {
       this.setState({ selectedOption: selectedOptionFound })
     }
@@ -37,7 +37,7 @@ class Select extends React.Component<Props, State> {
   }
 
   render(): JSX.Element {
-    const { label, options } = this.props
+    const { label, options, value } = this.props
     const { isOpen, selectedOption } = this.state
 
     return (
@@ -60,7 +60,7 @@ class Select extends React.Component<Props, State> {
                 key={`option-${option.value}-${index}`}
                 label={option.label}
                 value={option.value}
-                selected={option.selected}
+                selected={value === option.value}
                 onSelect={this.onSelect}
               />
             ))

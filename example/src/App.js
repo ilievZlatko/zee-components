@@ -25,13 +25,13 @@ class App extends Component {
     password: '',
     switchChecked: false,
     numberVal: 0,
+    selectValue: null,
     options: [
-      { value: null, label: 'Select option', selected: true },
-      { value: 'option-1', label: 'Option 1', selected: false },
-      { value: 'option-2', label: 'Option 2', selected: false },
-      { value: 'option-3', label: 'Option 3', selected: false },
-      { value: 'option-4', label: 'Option 4', selected: false },
-      { value: 'really-long', label: 'This is the longest ever option here...', selected: false }
+      { value: null, label: 'Select option' },
+      { value: 'option-1', label: 'Option 1' },
+      { value: 'option-2', label: 'Option 2' },
+      { value: 'option-3', label: 'Option 3' },
+      { value: 'option-4', label: 'Option 4' }
     ]
   }
 
@@ -64,6 +64,7 @@ class App extends Component {
 
   selectOption = option => {
     console.log(option)
+    this.setState({ selectValue: option.value })
   }
 
   changePass = event => {
@@ -71,7 +72,7 @@ class App extends Component {
   }
 
   render () {
-    const { selectBtnVal, radioSelected, optionOneSelected, text, switchChecked, numberVal, options, password} = this.state
+    const { selectBtnVal, radioSelected, optionOneSelected, text, switchChecked, numberVal, options, password, selectValue} = this.state
 
     return (
       <div style={{ width: '960px', margin: '20px auto' }}>
@@ -133,7 +134,7 @@ class App extends Component {
         <Number id='number' value={numberVal} onChange={(e) => this.onNumberChange(e)} label='Number label' />
         <br />
         <br />
-        <Select label='Select' options={options} onChange={option => this.selectOption(option)} />
+        <Select label='Select' options={options} value={selectValue} onChange={option => this.selectOption(option)} />
         <br />
         <br />
         <Link to='https://www.google.com/' target='_blank'>Visit Google</Link><br />
