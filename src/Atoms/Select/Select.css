@@ -29,9 +29,10 @@
 }
 
 .OptionsContainer {
-  position: relative;
+  position: absolute;
   background: #31434c;
   height: 0;
+  visibility: hidden;
   z-index: -1;
   opacity: 0;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
@@ -39,6 +40,7 @@
 
 .OptionsContainerOpen {
   position: fixed;
+  visibility: visible;
   border-radius: 8px;
   padding: 10px 0;
   height: 120px;

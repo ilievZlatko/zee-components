@@ -1,6 +1,6 @@
 .Option {
   display: flex;
-  padding: 5px 25px;
+  padding: 5px 15px;
   box-sizing: border-box;
   font-size: 14px;
   color: white;
@@ -18,11 +18,14 @@
 
 .OptionLabel {
   position: relative;
-  padding: 0 25px;
+  padding: 0 18px;
   box-sizing: border-box;
 }
 
 .Tick {
   position: absolute;
+  top: 50%;
   left: 0;
+  width: 12px;
+  transform: translateY(-50%);
 }
