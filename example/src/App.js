@@ -32,7 +32,8 @@ class App extends Component {
       { value: 'option-2', label: 'Option 2' },
       { value: 'option-3', label: 'Option 3' },
       { value: 'option-4', label: 'Option 4' }
-    ]
+    ],
+    search: ''
   }
 
   onSelectChange = val => {
@@ -71,8 +72,23 @@ class App extends Component {
     this.setState({ password: event.currentTarget.value })
   }
 
+  changeSearch = event => {
+    this.setState({ search: event.currentTarget.value })
+  }
+
   render () {
-    const { selectBtnVal, radioSelected, optionOneSelected, text, switchChecked, numberVal, options, password, selectValue} = this.state
+    const {
+      selectBtnVal,
+      radioSelected,
+      optionOneSelected,
+      text,
+      switchChecked,
+      numberVal,
+      options,
+      password,
+      selectValue,
+      search
+    } = this.state
 
     return (
       <div style={{ width: '960px', margin: '20px auto' }}>
@@ -128,7 +144,8 @@ class App extends Component {
         <br/>
         <br/>
         <Text id='text' label='Label' placeholder='Your name' value={text} onChange={(e) => this.onTextChange(e)} /><br />
-        <Text id='passsword' type='password' label='Password' placeholder='Your password' value={password} onChange={(e) => this.changePass(e)} />
+        <Text id='passsword' type='password' label='Password' placeholder='Your password' value={password} onChange={(e) => this.changePass(e)} /><br/>
+        <Text id='search' type='search' placeholder='search' value={search} onChange={(e) => this.changeSearch(e)} />
         <br />
         <br />
         <Number id='number' value={numberVal} onChange={(e) => this.onNumberChange(e)} label='Number label' />

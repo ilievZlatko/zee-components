@@ -1,5 +1,23 @@
 .TextWrapper {
+  position: relative;
   display: inline-flex;
   flex-flow: column;
   box-sizing: border-box;
+}
+
+.Search {
+  border-radius: 30px;
+  width: 100%;
+  min-width: 250px;
+  text-indent: 30px;
+}
+
+.SeachIcon {
+  position: absolute;
+  padding: 7px;
+  top: 50%;
+  left: 4px;
+  border-radius: 50%;
+  background-color: var(--coral);
+  transform: translateY(-50%);
 }
