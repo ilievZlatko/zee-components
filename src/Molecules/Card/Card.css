@@ -1,0 +1,21 @@
+.Card {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 12px;
+}
+
+.CardDashed {
+  border: 1px dashed var(--light-grey);
+}
+
+.CardShadowed {
+  box-shadow: 0 2px 4px 0 rgba(43, 61, 73, 0.15);
+}
+
+.CardShadowed:hover {
+  cursor: pointer;
+  box-shadow: 0 3px 6px 0 rgba(43, 61, 73, 0.18);
+}

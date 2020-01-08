@@ -7,6 +7,9 @@
   cursor: pointer;
   user-select: none;
   justify-content: center;
+  height: auto;
+  width: auto;
+  white-space: nowrap;
 }
 
 .Option:hover,

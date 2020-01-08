@@ -12,7 +12,8 @@ import {
   Number,
   Select,
   Link,
-  TextArea
+  TextArea,
+  Card
  } from 'zee-components'
 
  import edit from './assets/images/edit-silh.svg'
@@ -29,10 +30,11 @@ class App extends Component {
     selectValue: null,
     options: [
       { value: null, label: 'Select option' },
-      { value: 'option-1', label: 'Option 1' },
-      { value: 'option-2', label: 'Option 2' },
-      { value: 'option-3', label: 'Option 3' },
-      { value: 'option-4', label: 'Option 4' }
+      { value: 'option-1', label: 'Lorem ipsum' },
+      { value: 'option-2', label: 'is simply dummy text' },
+      { value: 'option-3', label: 'of the printing and typesetting industry.' },
+      { value: 'option-4', label: 'Lorem Ipsum has been' },
+      { value: 'option-5', label: 'the industry\'s standard dummy text' },
     ],
     search: ''
   }
@@ -162,6 +164,47 @@ class App extends Component {
         <br />
         <Link to='https://www.google.com/' target='_blank'>Visit Google</Link><br />
         <Link onClick={() => console.log('Execute some code here!')} icon={edit}>Edit</Link>
+        <br />
+        <br />
+        <Card dashed>
+          <div style={{
+            width: '350px',
+            padding: '10px 20px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection: 'column'
+          }}>
+            <h3>This is card title</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <Button
+              secondary
+              onClick={(e) => console.log(e)}
+            >CTA Button</Button><br/>
+          </div>
+        </Card>
+        <br />
+        <br />
+        <Card shadowed>
+          <div style={{
+            width: '350px',
+            padding: '10px 20px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection: 'column'
+          }}>
+            <h3>This is card title</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <Button
+              onClick={(e) => console.log(e)}
+            >CTA Button</Button><br/>
+          </div>
+        </Card>
       </div>
     )
   }
