@@ -11,7 +11,8 @@ import {
   Switch,
   Number,
   Select,
-  Link
+  Link,
+  TextArea
  } from 'zee-components'
 
  import edit from './assets/images/edit-silh.svg'
@@ -114,7 +115,7 @@ class App extends Component {
           value='one'
           checked={selectBtnVal === 'one'}
           onClick={this.onSelectChange}
-        >Option One</SelectButton>
+        >Option One</SelectButton>&nbsp;&nbsp;
         <SelectButton
           value='two'
           checked={selectBtnVal === 'two'}
@@ -130,7 +131,9 @@ class App extends Component {
         <br />
         <Checkbox id='checkbox-1' name='checkbox-1' value='option-1' checked={optionOneSelected} onChange={(e) => this.onCheckboxChange(e)} label='Option 1' />
         <br />
+        <br />
         <Switch name='checkbox-1' value='switch' checked={switchChecked} onChange={(e) => this.onSwitchChange(e)} />
+        <br />
         <br />
         <Switch name='checkbox-2' disabled value='switch2' checked={true} onChange={(e) => this.onSwitchChange(e)} />
         <br />
@@ -143,9 +146,12 @@ class App extends Component {
         <Tag danger rounded>Danger</Tag>
         <br/>
         <br/>
-        <Text id='text' label='Label' placeholder='Your name' value={text} onChange={(e) => this.onTextChange(e)} /><br />
-        <Text id='passsword' type='password' label='Password' placeholder='Your password' value={password} onChange={(e) => this.changePass(e)} /><br/>
+        <Text id='text' label='Label' placeholder='Your name' value={text} onChange={(e) => this.onTextChange(e)} /><br /><br />
+        <Text id='passsword' type='password' label='Password' placeholder='Your password' value={password} onChange={(e) => this.changePass(e)} /><br/><br />
         <Text id='search' type='search' placeholder='search' value={search} onChange={(e) => this.changeSearch(e)} />
+        <br />
+        <br />
+        <TextArea id='textarea' label='Text here' placeholder='Place your text here' onChange={e => console.log(e.target.value)} />
         <br />
         <br />
         <Number id='number' value={numberVal} onChange={(e) => this.onNumberChange(e)} label='Number label' />

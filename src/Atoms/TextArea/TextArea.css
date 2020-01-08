@@ -1,0 +1,6 @@
+.TextAreaWrapper {
+  position: relative;
+  display: inline-flex;
+  flex-flow: column;
+  box-sizing: border-box;
+}
