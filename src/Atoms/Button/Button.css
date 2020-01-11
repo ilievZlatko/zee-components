@@ -37,6 +37,29 @@
   border-color: #e98080;
 }
 
+.confirm {
+  background-color: var(--navy);
+  border-color: var(--navy);
+}
+
+.confirm:hover {
+  background-color: #474982;
+  border-color: #474982;
+  border-bottom-color: #1f1f38;
+}
+
+.confirm:disabled {
+  cursor: not-allowed;
+  background-color: #474982;
+  border-color: #474982;
+  color: #C6C5C5;
+}
+
+.confirm:active {
+  background-color: #3f4174;
+  border-color: #3f4174;
+}
+
 .secondary {
   border-color: var(--coral);
   background-color: transparent;

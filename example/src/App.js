@@ -107,6 +107,10 @@ class App extends Component {
           onClick={(e) => console.log(e)}
         >Label</Button><br/>
         <Button
+          confirm
+          onClick={(e) => console.log(e)}
+        >Confirm Btn</Button><br/>
+        <Button
           tertiary
           onClick={(e) => console.log(e)}
         >Label</Button><br/><br/>

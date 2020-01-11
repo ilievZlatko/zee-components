@@ -9,6 +9,7 @@ class Button extends React.Component<TProps, {}> {
     type: 'button',
     primary: true,
     secondary: false,
+    confirm: false,
     neutral: false,
     tertiary: false,
     disabled: false,
@@ -16,7 +17,7 @@ class Button extends React.Component<TProps, {}> {
   }
 
   public render(): JSX.Element {
-    const { children, type, secondary, tertiary, neutral, onClick, disabled, icon } = this.props
+    const { children, type, secondary, confirm, tertiary, neutral, onClick, disabled, icon } = this.props
 
     let styleType
 
@@ -26,6 +27,8 @@ class Button extends React.Component<TProps, {}> {
       styleType = 'secondary'
     } else if (tertiary) {
       styleType = 'tertiary'
+    } else if (confirm) {
+      styleType = 'confirm'
     } else {
       styleType = 'primary'
     }

@@ -6,6 +6,7 @@ export interface TProps {
   primary?: boolean;
   secondary?: boolean;
   neutral?: boolean;
+  confirm?: boolean;
   disabled?: boolean;
   tertiary?: boolean;
   onClick: (event: React.MouseEvent) => void;
