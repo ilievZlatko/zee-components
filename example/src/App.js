@@ -187,7 +187,7 @@ class App extends Component {
         </Card>
         <br />
         <br />
-        <Card shadowed>
+        <Card shadowed onClick={e => console.log(e.currentTarget)}>
           <div style={{
             width: '350px',
             padding: '10px 20px',
